@@ -4,10 +4,7 @@ import com.example.aluracursos.api_rest.domain.curso.Curso;
 import com.example.aluracursos.api_rest.domain.respuesta.Respuesta;
 import com.example.aluracursos.api_rest.domain.usuario.Usuario;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -16,6 +13,7 @@ import java.util.List;
 @Table(name = "topicos")
 @Entity(name = "topico")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
