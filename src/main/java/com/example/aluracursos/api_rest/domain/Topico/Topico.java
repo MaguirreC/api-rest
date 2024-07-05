@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -23,7 +24,7 @@ public class Topico {
     private Long id;
     private String titulo;
     private String mensaje;
-    private Timestamp fechaCreacion;
+    private LocalDateTime fechaCreacion;
     private String status;
 
     @ManyToOne
@@ -37,3 +38,4 @@ public class Topico {
     @OneToMany(mappedBy = "topico", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     List<Respuesta> respuestas;
 }
+

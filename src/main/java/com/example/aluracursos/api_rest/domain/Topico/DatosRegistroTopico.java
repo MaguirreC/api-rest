@@ -7,14 +7,14 @@ import java.time.LocalDateTime;
 
 public record DatosRegistroTopico(String titulo,
                                   String mensaje,
-                                  Timestamp fechaCreacion,
-                                  Long cursoId) {
+                                  LocalDateTime fechaCreacion,
+                                  String nombreCurso) {
     public DatosRegistroTopico(Topico topico) {
         this(
                 topico.getTitulo(),
                 topico.getMensaje(),
                 topico.getFechaCreacion(),
-                topico.getCurso().getId()
+                topico.getCurso().getNombre()
         );
     }
 

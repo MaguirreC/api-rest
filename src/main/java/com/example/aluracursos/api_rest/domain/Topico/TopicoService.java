@@ -15,7 +15,7 @@ public class TopicoService {
 
 
     public DatosRegistroTopico createTopico(DatosRegistroTopico datos) {
-        Curso curso = cursoRepository.findById(datos.cursoId())
+        Curso curso = cursoRepository.findByNombre(datos.nombreCurso())
                 .orElseThrow(() -> new RuntimeException("Curso no encontrado"));
 
         Topico topico = new Topico();
@@ -25,9 +25,6 @@ public class TopicoService {
         topico.setCurso(curso);
 
         Topico topicoGuardado = topicoRepository.save(topico);
-
         return new DatosRegistroTopico(topicoGuardado);
-
-
     }
 }
