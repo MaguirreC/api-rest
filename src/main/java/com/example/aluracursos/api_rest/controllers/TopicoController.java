@@ -33,4 +33,31 @@ public class TopicoController {
         Page<DatosTopicoRespuesta> topicos = topicoRepository.findAll(paginacion).map(DatosTopicoRespuesta::new);
         return ResponseEntity.ok(topicos);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<DatosRegistroTopico> actualizarTopico(@PathVariable Long id, @RequestBody @Valid DatosActualizarTopico datos) {
+        Topico updatedTopico = topicoService.actualizarTopico(id, datos);
+        DatosRegistroTopico respuesta = new DatosRegistroTopico(
+                updatedTopico.getTitulo(),
+                updatedTopico.getMensaje(),
+                updatedTopico.getFechaCreacion(),
+                updatedTopico.getAutor().getNombre(),
+                updatedTopico.getCurso().getNombre()  // Assuming this is how you map the curso
+        );
+        return ResponseEntity.ok(respuesta);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity eliminarTopico(@PathVariable Long id){
+        Topico topico = topicoRepository.getReferenceById(id);
+        topicoRepository.delete(topico);
+        return ResponseEntity.noContent().build();
+
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DatosRegistroTopico> topicoById(@PathVariable Long id){
+        DatosRegistroTopico topico = topicoService.topicoById(id);
+        return ResponseEntity.ok(topico);
+    }
 }

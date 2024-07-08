@@ -1,0 +1,1 @@
+ALTER TABLE topicos ADD COLUMN autor VARCHAR(255);
