@@ -88,6 +88,6 @@ git clone https://github.com/MaguirreC/api-rest.git
 
 ## Autor
 
-- Desarollado por michael aguirre(https://github.com/MaguirreCap)
+- Desarollado por michael aguirre(https://github.com/MaguirreC)
 
 
