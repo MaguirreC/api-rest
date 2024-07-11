@@ -1,4 +1,4 @@
-package com.example.aluracursos.api_rest.domain.respuesta;
+package com.example.aluracursos.api_rest.domain.Topico.respuesta;
 
 import java.time.LocalDateTime;
 

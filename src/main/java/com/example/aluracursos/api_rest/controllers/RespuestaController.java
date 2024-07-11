@@ -1,10 +1,9 @@
 package com.example.aluracursos.api_rest.controllers;
 
-import com.example.aluracursos.api_rest.domain.Topico.DatosTopicoRespuesta;
-import com.example.aluracursos.api_rest.domain.respuesta.DatosActualizarRespuesta;
-import com.example.aluracursos.api_rest.domain.respuesta.DatosRespuesta;
-import com.example.aluracursos.api_rest.domain.respuesta.Respuesta;
-import com.example.aluracursos.api_rest.domain.respuesta.RespuestaService;
+import com.example.aluracursos.api_rest.domain.Topico.respuesta.DatosActualizarRespuesta;
+import com.example.aluracursos.api_rest.domain.Topico.respuesta.DatosRespuesta;
+import com.example.aluracursos.api_rest.domain.Topico.respuesta.Respuesta;
+import com.example.aluracursos.api_rest.domain.Topico.respuesta.RespuestaService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

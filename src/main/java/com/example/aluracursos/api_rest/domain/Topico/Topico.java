@@ -1,12 +1,11 @@
 package com.example.aluracursos.api_rest.domain.Topico;
 
 import com.example.aluracursos.api_rest.domain.curso.Curso;
-import com.example.aluracursos.api_rest.domain.respuesta.Respuesta;
+import com.example.aluracursos.api_rest.domain.Topico.respuesta.Respuesta;
 import com.example.aluracursos.api_rest.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 
